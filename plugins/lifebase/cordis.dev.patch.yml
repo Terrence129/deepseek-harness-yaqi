@@ -1,0 +1,20 @@
+# Development layer. Launch from the repository root, launcher flags before the
+# profile name (after it they are forwarded to the app):
+#   pnpm dsh --profile web --patch plugins/lifebase/cordis.dev.patch.yml
+# The relative `name` is anchored to this file's directory, so the checkout is
+# loaded in place and the profile stays untouched.
+#
+# The paths come from the environment, so this file stays free of machine paths
+# and carries the same two variables the end-to-end test reads. Set them in the
+# repository-root `.env` (git-ignored, loaded when the launcher starts there):
+#   LIFEBASE_EXE=<path to the lifebase console script>
+#   LIFEBASE_DEMO_DIR=<path to a data directory with a built graph>
+# Unset, the placeholders below apply and the plugin refuses to activate with a
+# message naming `command`.
+- insert:
+    - id: lifebase
+      name: ./index.js
+      config:
+        command: !!js process.env.LIFEBASE_EXE ?? 'lifebase'
+        dataDir: !!js process.env.LIFEBASE_DEMO_DIR ?? '/path/to/lifebase-data/libraries/demo'
+        destination: cloud

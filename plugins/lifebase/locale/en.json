@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Lifebase (read-only)",
+    "description": "Query a local Lifebase archive: topics, message search, conversation timeline, evidence lookup, and evidence context."
+  }
+}

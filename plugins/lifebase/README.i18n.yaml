@@ -1,0 +1,28 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write plugins/lifebase/README.md
+/dsh-lifebase:
+  en: 0165b7027b15ba49
+  zh: f8ac47681c7bd7c3
+/dsh-lifebase/tools:
+  en: 6d761ea9ad317458
+  zh: 01be22e2f98da4e8
+/dsh-lifebase/read-only-guarantee:
+  en: fbc0521e5150e31d
+  zh: 60d5055beeca3b6b
+/dsh-lifebase/settings:
+  en: 310128c815ba75da
+  zh: 81db76aae6294ca8
+/dsh-lifebase/settings/destination-is-a-declaration-not-a-network-control:
+  en: 094b602c15617d53
+  zh: 32d18a7e1c07c5c0
+/dsh-lifebase/errors:
+  en: 0ccca42a38d76d0c
+  zh: 3ca87b7f361a9cc7
+/dsh-lifebase/install:
+  en: d5bd2ffe5ee8df57
+  zh: 1070451215246195
+/dsh-lifebase/requirements:
+  en: 1728f3c3bddc2573
+  zh: 2cabbf305356e477

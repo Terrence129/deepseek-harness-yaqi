@@ -1,0 +1,15 @@
+# Bundle layer, inserted when this package is selected as a bundle.
+# `name` is the package name, resolved through the profile's node_modules.
+#
+# The values below are placeholders on purpose: this file is committed to a
+# public repository, so it carries no machine paths. Put the real ones in the
+# profile's own patch layer (`<harness home>/profiles/<profile>/cordis.patch.yml`),
+# which lives outside any checkout and is applied after every bundle layer: a row
+# with the same id there replaces this whole config block.
+- insert:
+    - id: lifebase
+      name: dsh-lifebase
+      config:
+        command: 'lifebase'
+        dataDir: '/path/to/lifebase-data/libraries/demo'
+        destination: cloud
